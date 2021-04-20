@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uniqmaster_project/UI/MainPage/AppMainPage.dart';
 import 'package:uniqmaster_project/UI/SplashScreen.dart';
 
 void main() {
@@ -17,10 +18,13 @@ class MyApp extends StatelessWidget {
         highlightColor: Colors.black45,
         accentColor: Colors.black12,
         primarySwatch: Colors.blue,
+        fontFamily: 'Poppins',
+
       ),
       initialRoute: '/',
       routes: {
         '/' : (context) => SplashScreen(),
+        '/Home' : (context) => AppMainPage()
       },
     );
   }
