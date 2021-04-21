@@ -4,7 +4,6 @@ import 'package:flutter_week_view/flutter_week_view.dart';
 import 'package:uniqmaster_project/UI/MainPage/AppBar.dart';
 import 'package:mk_drop_down_menu/mk_drop_down_menu.dart';
 import 'package:intl/intl.dart';
-import 'package:calendar_views/calendar_views.dart';
 
 class TimeLinePage extends StatefulWidget{
   @override
