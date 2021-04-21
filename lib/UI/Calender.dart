@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 // import 'package:intl/intl.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:uniqmaster_project/UI/MainPage/AppBar.dart';
 // import 'package:intl/intl.dart';
 class CalenderPage extends StatefulWidget{
   @override
@@ -70,8 +71,8 @@ class CalenderPageFull extends State<CalenderPage>{
 
   void _onDaySelected(DateTime selectedDay, DateTime focusedDay)  {
     setState(() {
-      print(_selectedDays);
-      print(_holidays);
+      // print(_selectedDays);
+      // print(_holidays);
       _selectedDays.clear();
       _focusedDay.value = selectedDay;
       if (_selectedDays.contains(selectedDay)) {
@@ -99,11 +100,12 @@ class CalenderPageFull extends State<CalenderPage>{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      appBar: MyAppBar(contextp: context,),
         body:  Column(
           children: [
 
             Padding(
-              padding:  EdgeInsets.only(top: MediaQuery.of(context).size.height*0.045,left: MediaQuery.of(context).size.width*0.025),
+              padding:  EdgeInsets.only(left: MediaQuery.of(context).size.width*0.025),
               child: Align(child: new Text('Calendar',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 20),),alignment: Alignment.centerLeft,),
             ),
             Divider(color: Color(0xffEFF0F6),thickness: 5,),
@@ -139,7 +141,7 @@ class CalenderPageFull extends State<CalenderPage>{
                 calendarStyle: CalendarStyle(
                   todayDecoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                        color: Color(0xff00BA88)
+                        color: Color(0xff0096B7)
                   ),
                   holidayDecoration: BoxDecoration(
                     border: Border.all(color: Color(0xffF4B740)),
@@ -166,7 +168,7 @@ class CalenderPageFull extends State<CalenderPage>{
 
 
             ),
-            new SizedBox(height: 25,),
+            new SizedBox(height: 5,),
             Divider(color: Color(0xffEFF0F6),thickness: 5,),
             Padding(
               padding: const EdgeInsets.all(8.0),

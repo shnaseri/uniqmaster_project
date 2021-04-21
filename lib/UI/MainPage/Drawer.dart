@@ -1,7 +1,10 @@
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:uniqmaster_project/UI/Calender.dart';
+import 'package:uniqmaster_project/UI/MainPage/TimeLine.dart';
 
 
 Widget builderDrawerLayout(BuildContext context,StateSetter setState)
@@ -57,7 +60,15 @@ Widget builderDrawerLayout(BuildContext context,StateSetter setState)
             onTap: (){
               Navigator.push(context, new MaterialPageRoute(builder: (context) => CalenderPage()));
             },
-          ),new ListTile(
+          ),
+          new ListTile(
+            leading: SvgPicture.asset('assets/images/Calender.svg',color: Color(0xff66738F),),
+            title: new Text('TimeLine',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.grey),),
+            onTap: (){
+              Navigator.push(context, new MaterialPageRoute(builder: (context) => TimeLinePage()));
+            },
+          ),
+          new ListTile(
             leading: SvgPicture.asset('assets/images/editquare.svg',color: Color(0xff66738F),),
             title: new Text('Homework',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500,color: Colors.grey),),
             onTap: (){
