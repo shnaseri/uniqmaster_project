@@ -15,7 +15,7 @@ class SplashScreenState extends State<SplashScreen>
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   startTime()
   {
-    var _duration = new Duration(seconds: 5);
+    var _duration = new Duration(seconds: 2);
     return new Timer(_duration, NavigationPage);
   }
   void NavigationPage()
